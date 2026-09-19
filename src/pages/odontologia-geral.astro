@@ -5,10 +5,6 @@ const canonical = `${siteUrl}/odontologia-geral`;
 
 const faqSchema = [
   {
-    question: 'A Clínica Reali atende crianças?',
-    answer: 'Sim. Oferecemos atendimento de odontopediatria com consulta inicial infantil especializada. Nossa equipe é treinada para criar uma experiência positiva e acolhedora para as crianças desde a primeira visita.'
-  },
-  {
     question: 'O que é periodontite e como é tratada?',
     answer: 'A periodontite é uma infecção grave das gengivas que compromete o osso de suporte dos dentes. O tratamento inclui raspagem e alisamento radicular (limpeza profunda abaixo da gengiva) e, em casos avançados, cirurgia periodontal. Após o tratamento, é essencial a manutenção periodontal periódica.'
   },
@@ -18,7 +14,7 @@ const faqSchema = [
   },
   {
     question: 'O tratamento de canal dói?',
-    answer: 'Não. O tratamento endodôntico (canal) é realizado sob anestesia local, sem dor durante o procedimento. É um tratamento que alivia a dor causada pela inflamação ou infecção da polpa dental.'
+    answer: 'O tratamento endodôntico é realizado com anestesia local. A técnica busca controlar a dor e tratar a inflamação ou infecção da polpa dental; após o procedimento, pode haver sensibilidade ou desconforto temporário.'
   },
   {
     question: 'A Clínica Reali trata bruxismo?',
@@ -37,18 +33,7 @@ const categories = [
       { name: 'Tratamento de Cárie', desc: 'Remoção do tecido comprometido e restauração com materiais biocompatíveis de alta resistência.' },
       { name: 'Restauração em Resina Composta', desc: 'Restaurações estéticas e funcionais com resina de última geração, combinando cor e durabilidade.' },
       { name: 'Selante Dental', desc: 'Proteção preventiva de fissuras e sulcos em dentes posteriores para prevenir cárie.' },
-      { name: 'Aplicação de Flúor', desc: 'Aplicação tópica para fortalecer o esmalte dental e prevenir cárie, especialmente indicado para crianças.' },
-    ]
-  },
-  {
-    id: 'odontopediatria',
-    title: 'Odontopediatria — Atendimento Infantil',
-    intro: 'Cuidamos do sorriso das crianças com uma abordagem lúdica e acolhedora, criando desde cedo uma relação positiva com o dentista.',
-    services: [
-      { name: 'Primeira Consulta Infantil', desc: 'Atendimento especializado para crianças desde os primeiros dentes, com abordagem acolhedora e sem traumas.' },
-      { name: 'Prevenção na Infância', desc: 'Selantes, flúor, orientações de higiene para os pais e acompanhamento do desenvolvimento da dentição.' },
-      { name: 'Restaurações em Dentes de Leite', desc: 'Tratamento de cárie em dentes de leite com técnicas adaptadas ao atendimento pediátrico.' },
-      { name: 'Espaço Mantenedor', desc: 'Dispositivo que preserva o espaço para os dentes permanentes quando há perda precoce de dentes de leite.' },
+      { name: 'Aplicação de Flúor', desc: 'Aplicação tópica para fortalecer o esmalte dental e prevenir cárie, conforme a indicação clínica.' },
     ]
   },
   {
@@ -96,8 +81,8 @@ const categories = [
 ---
 
 <Layout
-  title="Odontologia em São José dos Campos — Tratamentos Completos | Clínica Reali"
-  description="Odontologia geral completa em São José dos Campos — SP: prevenção, restauração, canal, ortodontia, periodontia, odontopediatria e mais. Clínica Reali, Vila Adyana. (12) 99184-3883."
+  title="Odontologia em São José dos Campos"
+  description="Odontologia geral completa em São José dos Campos — SP: prevenção, restauração, canal, ortodontia, periodontia, próteses e outros tratamentos. Clínica Reali, Vila Adyana. (12) 99184-3883."
   canonical={canonical}
   {faqSchema}
 >
@@ -115,7 +100,7 @@ const categories = [
           <span class="text-emerald-400">Tratamentos Completos</span>
         </h1>
         <p class="text-slate-300 leading-relaxed mb-6">
-          Da prevenção às especialidades avançadas — todos os tratamentos que você precisa em uma única clínica, no bairro Vila Adyana, SJC.
+          Tratamentos clínicos, próteses, ortodontia, periodontia e endodontia na Vila Adyana, em São José dos Campos.
         </p>
         <a
           href="https://wa.me/5512991843883?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta!"
