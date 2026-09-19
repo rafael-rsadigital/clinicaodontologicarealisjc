@@ -14,11 +14,10 @@ const testimonials = [
 ];
 
 const faqSchema = [
-  { question: 'A Clínica Reali atende emergências fora do horário comercial?', answer: 'Sim. A Clínica Reali oferece atendimento de urgência odontológica 24 horas por dia, 7 dias por semana, incluindo madrugadas, feriados e fins de semana. O contato deve ser feito via WhatsApp: (12) 99184-3883.' },
-  { question: 'Qual o endereço da Clínica Reali em São José dos Campos?', answer: 'A Clínica Reali está localizada na R. Cel. João Cursino, 185, no bairro Vila Adyana, São José dos Campos — SP, CEP 12243-680.' },
-  { question: 'Quais são os horários de funcionamento da Clínica Reali?', answer: 'De segunda a sexta-feira das 09h às 18h, e sábados das 09h às 13h. Para urgências, o atendimento é 24 horas.' },
-  { question: 'Qual é a avaliação da Clínica Reali no Google?', answer: 'A Clínica Reali possui nota 4.9 de 5 estrelas no Google, com 57 avaliações de pacientes reais.' },
-  { question: 'A Clínica Reali realiza harmonização orofacial?', answer: 'Sim. A Clínica Reali é especializada em harmonização orofacial, incluindo preenchimento labial, rinomodelação, botox, bioestimuladores de colágeno e full face, todos realizados por profissionais habilitados pelo CFO com produtos registrados na ANVISA.' }
+  { question: 'Onde fica a Clínica Reali em São José dos Campos?', answer: 'A Clínica Reali está localizada na R. Cel. João Cursino, 185, no bairro Vila Adyana, São José dos Campos — SP, CEP 12243-680.' },
+  { question: 'Quais tratamentos odontológicos a Clínica Reali oferece?', answer: 'A clínica reúne implantes e próteses, harmonização orofacial, Botox, preenchimentos, estética dental, clareamento, facetas, lentes, ortodontia, periodontia, endodontia e outros tratamentos odontológicos.' },
+  { question: 'A Clínica Reali realiza harmonização orofacial?', answer: 'Sim. Entre os procedimentos estão toxina botulínica, preenchimento labial e facial, bioestimuladores de colágeno e outros procedimentos de harmonização orofacial, conforme avaliação profissional.' },
+  { question: 'Como funciona a avaliação para implante dentário?', answer: 'A avaliação começa com exame clínico e, quando indicado, exames de imagem para analisar as condições ósseas e definir o planejamento do tratamento.' }
 ];
 ---
 
@@ -32,21 +31,13 @@ const faqSchema = [
   <section class="bg-slate-900 py-20 md:py-28">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-2xl">
-        <span class="inline-flex items-center gap-1.5 text-xs font-medium text-red-400 border border-red-800 bg-red-950 px-3 py-1 rounded-full mb-6">
-          <span class="relative flex h-1.5 w-1.5">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-red-500"></span>
-          </span>
-          Atendimento de urgência disponível 24 horas
-        </span>
-
         <h1 class="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-5">
           Clínica Odontológica em<br/>
           <span class="text-emerald-400">São José dos Campos</span>
         </h1>
 
         <p class="text-slate-300 text-lg leading-relaxed mb-8">
-          Especialistas em implantes dentários, harmonização orofacial e odontologia estética. Localizada no bairro Vila Adyana, em São José dos Campos — SP. Nota 4.9 no Google em 57 avaliações.
+          Implantes dentários, harmonização orofacial, Botox, estética dental e tratamentos odontológicos para diferentes necessidades. Na Vila Adyana, em São José dos Campos — SP.
         </p>
 
         <div class="flex flex-col sm:flex-row gap-3">
@@ -59,12 +50,7 @@ const faqSchema = [
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
             Agendar Consulta
           </a>
-          <a
-            href="/urgencia-24h"
-            class="inline-flex items-center justify-center gap-2 border border-slate-600 text-slate-300 hover:border-slate-400 hover:text-white font-medium px-6 py-3 rounded-lg transition-colors"
-          >
-            Urgência Odontológica 24h
-          </a>
+          <a href="/estetica-e-harmonizacao" class="inline-flex items-center justify-center gap-2 border border-slate-600 text-slate-300 hover:border-slate-400 hover:text-white font-medium px-6 py-3 rounded-lg transition-colors">Conhecer tratamentos estéticos</a>
         </div>
 
         <p class="mt-6 text-slate-500 text-sm">
@@ -89,7 +75,6 @@ const faqSchema = [
         </div>
         <div class="hidden sm:block w-px h-6 bg-slate-300"></div>
         <div class="flex items-center gap-6 text-sm text-slate-500">
-          <span><strong class="text-slate-900">24h</strong> Urgências</span>
           <span><strong class="text-slate-900">+10</strong> Especialidades</span>
           <span>Vila Adyana, <strong class="text-slate-900">SJC</strong></span>
         </div>
@@ -135,20 +120,11 @@ const faqSchema = [
             </svg>
           </div>
           <h3 class="text-slate-900 font-semibold mb-1 group-hover:text-emerald-700 transition-colors">Odontologia Geral</h3>
-          <p class="text-slate-500 text-sm leading-relaxed">Consultas, restaurações, canal, periodontia, ortodontia e odontopediatria.</p>
+          <p class="text-slate-500 text-sm leading-relaxed">Consultas, restaurações, canal, periodontia, ortodontia, próteses e outros tratamentos.</p>
           <span class="mt-3 inline-block text-emerald-700 text-sm font-medium">Saiba mais &rarr;</span>
         </a>
 
-        <a href="/urgencia-24h" class="group block border border-red-200 bg-red-50 rounded-xl p-6 hover:border-red-400 transition-all">
-          <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center mb-4 border border-red-200">
-            <svg class="w-5 h-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/>
-            </svg>
-          </div>
-          <h3 class="text-red-700 font-semibold mb-1">Urgência 24 Horas</h3>
-          <p class="text-red-600 text-sm leading-relaxed">Dor de dente, abscesso, trauma ou fratura dental. Atendemos a qualquer hora.</p>
-          <span class="mt-3 inline-block text-red-600 text-sm font-medium">Atendimento imediato &rarr;</span>
-        </a>
+        
       </div>
     </div>
   </section>
@@ -167,16 +143,15 @@ const faqSchema = [
         </div>
         <div>
           <p class="text-emerald-700 text-sm font-semibold uppercase tracking-wider mb-2">Sobre a Clínica</p>
-          <h2 class="text-3xl font-bold text-slate-900 mb-5">Referência em odontologia no bairro Vila Adyana, SJC</h2>
+          <h2 class="text-3xl font-bold text-slate-900 mb-5">Odontologia e estética na Vila Adyana</h2>
           <div class="space-y-4 text-slate-600 leading-relaxed">
-            <p>A <strong class="text-slate-800">Clínica Reali Odontologia e Estética</strong> está localizada na R. Cel. João Cursino, 185, no bairro Vila Adyana, em São José dos Campos — SP. Nascemos com o objetivo de oferecer tratamentos odontológicos de alto nível com atendimento humanizado e estrutura de ponta.</p>
-            <p>Nossa equipe é liderada pela <strong class="text-slate-800">Dra. Gabriela</strong>, cirurgiã-dentista com expertise em implantologia, harmonização orofacial e estética dental, e conta ainda com a <strong class="text-slate-800">Dra. Thaís</strong>, especialista reconhecida pelo cuidado e sensibilidade no atendimento — especialmente com pacientes que têm ansiedade ou medo do dentista.</p>
-            <p>Um dos nossos principais diferenciais é o <strong class="text-slate-800">atendimento de urgência odontológica 24 horas</strong>. Sabemos que dores de dente não esperam horário comercial — e por isso mantemos plantão disponível inclusive de madrugada, feriados e fins de semana.</p>
+            <p>A <strong class="text-slate-800">Clínica Reali Odontologia e Estética</strong> está localizada na R. Cel. João Cursino, 185, na Vila Adyana, em São José dos Campos — SP. A clínica reúne tratamentos odontológicos, implantes, estética dental e procedimentos de harmonização orofacial no mesmo endereço.</p>
+            <p>A <strong class="text-slate-800">Dra. Gabriela</strong> atua nos tratamentos odontológicos e procedimentos estéticos realizados na clínica, com avaliação individual para definir a indicação de cada procedimento.</p>
+            <p>O atendimento inclui desde tratamentos clínicos e reabilitação com implantes até procedimentos como Botox, preenchimento, facetas, lentes de contato dental e clareamento.</p>
           </div>
           <div class="mt-8 grid grid-cols-2 gap-3">
             {[
               { label: 'Nota 4.9 no Google' },
-              { label: 'Urgência 24 horas' },
               { label: 'Planejamento digital 3D' },
               { label: 'Atendimento humanizado' },
             ].map(item => (
@@ -310,8 +285,7 @@ const faqSchema = [
             <dl class="text-sm text-slate-600 space-y-1">
               <div class="flex justify-between"><dt>Segunda a Sexta</dt><dd>09h às 18h</dd></div>
               <div class="flex justify-between"><dt>Sábado</dt><dd>09h às 13h</dd></div>
-              <div class="flex justify-between"><dt>Emergências</dt><dd class="text-red-600 font-medium">24 horas</dd></div>
-            </dl>
+              </dl>
           </div>
           <a href="https://wa.me/5512991843883?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta!" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-emerald-700 hover:bg-emerald-800 text-white font-semibold px-6 py-3 rounded-lg transition-colors">Agendar pelo WhatsApp</a>
         </div>
