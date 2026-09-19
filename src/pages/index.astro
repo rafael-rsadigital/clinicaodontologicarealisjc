@@ -1,0 +1,524 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const siteUrl = 'https://clinicaodontologicarealisjc.vercel.app';
+---
+
+<Layout
+  title="Dentista em São José dos Campos | Implantes, Harmonização e Urgência 24h"
+  description="Clínica Reali Odontologia e Estética em São José dos Campos — SP. Especialistas em Implantes Dentários, Harmonização Orofacial e Atendimento de Urgência 24h. Nota 4.9 no Google. Agende agora!"
+  canonical={siteUrl}
+>
+  <!-- ============================= -->
+  <!-- HERO SECTION -->
+  <!-- ============================= -->
+  <section class="relative bg-navy-900 overflow-hidden min-h-[90vh] flex items-center">
+    <!-- Fundo com overlay -->
+    <div class="absolute inset-0 bg-gradient-to-br from-navy-900 via-navy-800 to-emerald-900 opacity-95"></div>
+    <!-- Placeholder imagem hero -->
+    <!-- INSERIR: /images/hero-clinica.webp como background-image -->
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+      <div class="max-w-3xl">
+
+        <!-- Badge Urgência 24h — Destaque crítico -->
+        <div class="inline-flex items-center gap-2 mb-6">
+          <span class="relative flex h-3 w-3">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+          </span>
+          <a
+            href="/urgencia-24h"
+            class="bg-red-600 hover:bg-red-700 text-white text-sm font-bold px-4 py-1.5 rounded-full uppercase tracking-wider transition-colors"
+          >
+            🚨 Urgência Odontológica — Atendemos 24 Horas
+          </a>
+        </div>
+
+        <!-- H1 Principal -->
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6">
+          Seu Sorriso Perfeito<br/>
+          <span class="text-brand-400">Começa Aqui</span>
+        </h1>
+
+        <p class="text-slate-300 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl">
+          Especialistas em <strong class="text-white">Implantes Dentários</strong>, <strong class="text-white">Harmonização Orofacial</strong> e tratamentos estéticos em São José dos Campos — SP. Tecnologia avançada com o cuidado que você merece.
+        </p>
+
+        <!-- Prova Social -->
+        <div class="flex items-center gap-3 mb-8">
+          <div class="flex text-gold-400" aria-label="Avaliação 4.9 estrelas">
+            {[1,2,3,4,5].map(() => (
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+              </svg>
+            ))}
+          </div>
+          <span class="text-white font-bold">4.9</span>
+          <span class="text-slate-400 text-sm">· 57 avaliações reais no Google</span>
+        </div>
+
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a
+            href="https://wa.me/5512991843883?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20na%20Cl%C3%ADnica%20Reali!"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-bold px-8 py-4 rounded-xl text-lg transition-all duration-200 hover:scale-105 shadow-lg"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+            Agendar Consulta
+          </a>
+          <a
+            href="/urgencia-24h"
+            class="inline-flex items-center justify-center gap-2 border-2 border-red-500 text-red-400 hover:bg-red-600 hover:text-white hover:border-red-600 font-bold px-8 py-4 rounded-xl text-lg transition-all duration-200"
+          >
+            🚨 Urgência Agora
+          </a>
+        </div>
+
+        <!-- Localização rápida -->
+        <div class="mt-8 flex items-center gap-2 text-slate-400 text-sm">
+          <svg class="w-4 h-4 text-brand-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+          <a href="https://maps.app.goo.gl/2AH4j41vCoMBEBgR8" target="_blank" rel="noopener noreferrer" class="hover:text-brand-400 transition-colors">
+            R. Cel. João Cursino, 185 — Vila Adyana, São José dos Campos - SP
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= -->
+  <!-- PROVA SOCIAL — Google Rating -->
+  <!-- ============================= -->
+  <section class="bg-slate-50 py-10 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 text-center md:text-left">
+        <!-- Rating Google -->
+        <div class="flex flex-col sm:flex-row items-center gap-4">
+          <div class="w-14 h-14 bg-white rounded-full shadow-md flex items-center justify-center border border-slate-200">
+            <svg class="w-8 h-8" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="flex items-center justify-center md:justify-start gap-1 mb-1">
+              {[1,2,3,4,5].map(() => (
+                <svg class="w-5 h-5 text-gold-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                </svg>
+              ))}
+            </div>
+            <p class="text-navy-800 font-bold text-xl">4.9 no Google</p>
+            <p class="text-slate-500 text-sm">57 avaliações reais de pacientes</p>
+          </div>
+        </div>
+
+        <!-- Divisor -->
+        <div class="hidden md:block w-px h-16 bg-slate-300"></div>
+
+        <!-- Stats rápidas -->
+        <div class="flex gap-8">
+          <div class="text-center">
+            <div class="text-3xl font-black text-brand-700">24h</div>
+            <div class="text-slate-500 text-sm">Urgências</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-black text-brand-700">+10</div>
+            <div class="text-slate-500 text-sm">Especialidades</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-black text-brand-700">SJC</div>
+            <div class="text-slate-500 text-sm">São José dos Campos</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= -->
+  <!-- SERVIÇOS / ESPECIALIDADES -->
+  <!-- ============================= -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <span class="text-brand-600 font-semibold text-sm uppercase tracking-wider">Especialidades</span>
+        <h2 class="text-3xl md:text-4xl font-black text-navy-900 mt-2 mb-4">Tudo que você precisa em um só lugar</h2>
+        <p class="text-slate-500 text-lg max-w-2xl mx-auto">
+          Da prevenção à reabilitação oral completa, oferecemos tratamentos de ponta com a mais alta tecnologia disponível.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Card 1: Implantes -->
+        <a href="/implantes-e-proteses" class="group bg-white border border-slate-200 rounded-2xl p-6 hover:border-brand-500 hover:shadow-xl transition-all duration-300">
+          <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-brand-600 transition-colors">
+            <svg class="w-7 h-7 text-brand-600 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 2C8 2 5 5 5 9c0 2.5 1.2 4.8 3 6.2L7 22l5-1.5 5 1.5-1-6.8C17.8 13.8 19 11.5 19 9c0-4-3-7-7-7z"/>
+            </svg>
+          </div>
+          <!-- INSERIR: /images/implante-dentario.webp -->
+          <h3 class="text-navy-900 font-bold text-lg mb-2 group-hover:text-brand-700 transition-colors">Implantes e Próteses</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">Implante unitário, All-on-4, All-on-6, implante zigomático, enxerto ósseo e muito mais.</p>
+          <div class="mt-4 flex items-center gap-1 text-brand-600 text-sm font-semibold">
+            Saiba mais
+            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+            </svg>
+          </div>
+        </a>
+
+        <!-- Card 2: Estética -->
+        <a href="/estetica-e-harmonizacao" class="group bg-white border border-slate-200 rounded-2xl p-6 hover:border-brand-500 hover:shadow-xl transition-all duration-300">
+          <div class="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-amber-500 transition-colors">
+            <svg class="w-7 h-7 text-amber-500 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/>
+            </svg>
+          </div>
+          <!-- INSERIR: /images/harmonizacao.webp -->
+          <h3 class="text-navy-900 font-bold text-lg mb-2 group-hover:text-brand-700 transition-colors">Estética e Harmonização</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">Harmonização orofacial, lentes de contato dental, facetas de resina e clareamento dental.</p>
+          <div class="mt-4 flex items-center gap-1 text-brand-600 text-sm font-semibold">
+            Saiba mais
+            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+            </svg>
+          </div>
+        </a>
+
+        <!-- Card 3: Geral -->
+        <a href="/odontologia-geral" class="group bg-white border border-slate-200 rounded-2xl p-6 hover:border-brand-500 hover:shadow-xl transition-all duration-300">
+          <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-blue-600 transition-colors">
+            <svg class="w-7 h-7 text-blue-600 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z"/>
+            </svg>
+          </div>
+          <!-- INSERIR: /images/odontologia-geral.webp -->
+          <h3 class="text-navy-900 font-bold text-lg mb-2 group-hover:text-brand-700 transition-colors">Odontologia Geral</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">Consultas, restaurações, canal, ortodontia, periodontia, Odontopediatria e muito mais.</p>
+          <div class="mt-4 flex items-center gap-1 text-brand-600 text-sm font-semibold">
+            Saiba mais
+            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+            </svg>
+          </div>
+        </a>
+
+        <!-- Card 4: Urgência -->
+        <a href="/urgencia-24h" class="group bg-red-50 border-2 border-red-200 rounded-2xl p-6 hover:border-red-500 hover:shadow-xl hover:bg-red-600 transition-all duration-300">
+          <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-red-700 transition-colors relative">
+            <span class="absolute -top-1 -right-1 w-3 h-3">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+            </span>
+            <svg class="w-7 h-7 text-red-600 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/>
+            </svg>
+          </div>
+          <h3 class="text-red-700 group-hover:text-white font-bold text-lg mb-2 transition-colors">Urgência 24 Horas</h3>
+          <p class="text-red-600 group-hover:text-red-100 text-sm leading-relaxed transition-colors">Dor de dente, abscesso, fratura dental, trauma. Atendemos qualquer hora, inclusive madrugada.</p>
+          <div class="mt-4 flex items-center gap-1 text-red-600 group-hover:text-white text-sm font-semibold transition-colors">
+            Atendimento imediato
+            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+            </svg>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= -->
+  <!-- SOBRE NÓS -->
+  <!-- ============================= -->
+  <section class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Imagem -->
+        <div class="relative">
+          <!-- INSERIR: /images/sobre-nos.webp -->
+          <div class="aspect-[4/3] bg-slate-200 rounded-2xl overflow-hidden flex items-center justify-center text-slate-400">
+            <div class="text-center p-8">
+              <svg class="w-16 h-16 mx-auto mb-3 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+              </svg>
+              <p class="text-sm">Inserir: sobre-nos.webp</p>
+            </div>
+          </div>
+          <!-- Badge flutuante -->
+          <div class="absolute -bottom-4 -right-4 bg-brand-600 text-white rounded-xl px-4 py-3 shadow-xl">
+            <div class="text-2xl font-black">4.9 ⭐</div>
+            <div class="text-xs text-brand-100">57 avaliações Google</div>
+          </div>
+        </div>
+
+        <!-- Texto -->
+        <div>
+          <span class="text-brand-600 font-semibold text-sm uppercase tracking-wider">Sobre a Clínica Reali</span>
+          <h2 class="text-3xl md:text-4xl font-black text-navy-900 mt-2 mb-6">
+            Excelência em Odontologia<br/>no Coração de Vila Adyana
+          </h2>
+          <div class="space-y-4 text-slate-600 leading-relaxed">
+            <p>
+              A <strong class="text-navy-800">Clínica Reali Odontologia e Estética</strong> é referência em saúde bucal e beleza facial em São José dos Campos — SP. Localizada na <strong class="text-navy-800">R. Cel. João Cursino, 185, no bairro Vila Adyana</strong>, nossa clínica foi fundada com o propósito de democratizar o acesso a tratamentos odontológicos de alta qualidade, aliando tecnologia de ponta ao cuidado humano individualizado.
+            </p>
+            <p>
+              Nossa equipe de cirurgiões-dentistas altamente qualificados atua em diversas especialidades — de implantologia e harmonização orofacial à periodontia avançada e ortodontia com alinhadores invisíveis — garantindo que cada paciente receba o tratamento ideal para suas necessidades e objetivos.
+            </p>
+            <p>
+              Um dos nossos principais diferenciais é o <strong class="text-navy-800">Atendimento de Urgência Odontológica 24 Horas</strong>. Sabemos que dores de dente não esperam horário comercial. Por isso, mantemos plantão disponível para emergências a qualquer hora, incluindo madrugadas, finais de semana e feriados.
+            </p>
+            <p>
+              Com nota <strong class="text-navy-800">4.9 estrelas no Google</strong> em 57 avaliações reais, nosso compromisso com a excelência é reconhecido por quem mais importa: nossos pacientes.
+            </p>
+          </div>
+
+          <!-- Diferenciais -->
+          <div class="mt-8 grid grid-cols-2 gap-4">
+            {[
+              { icon: '🏆', text: 'Nota 4.9 no Google' },
+              { icon: '🚨', text: 'Urgência 24 Horas' },
+              { icon: '🔬', text: 'Tecnologia Digital' },
+              { icon: '❤️', text: 'Atendimento Humanizado' },
+            ].map(item => (
+              <div class="flex items-center gap-2 text-sm text-navy-700 font-medium">
+                <span class="text-lg">{item.icon}</span>
+                {item.text}
+              </div>
+            ))}
+          </div>
+
+          <a
+            href="https://wa.me/5512991843883?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20Cl%C3%ADnica%20Reali!"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-8 inline-flex items-center gap-2 bg-navy-900 hover:bg-navy-800 text-white font-semibold px-6 py-3 rounded-xl transition-colors"
+          >
+            Conheça nossa equipe
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= -->
+  <!-- DEPOIMENTOS -->
+  <!-- ============================= -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <span class="text-brand-600 font-semibold text-sm uppercase tracking-wider">Depoimentos</span>
+        <h2 class="text-3xl md:text-4xl font-black text-navy-900 mt-2 mb-4">O que nossos pacientes dizem</h2>
+        <div class="flex items-center justify-center gap-2">
+          <div class="flex text-gold-400">
+            {[1,2,3,4,5].map(() => (
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+              </svg>
+            ))}
+          </div>
+          <span class="text-slate-500 text-sm">4.9 · 57 avaliações no Google</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Depoimento 1 -->
+        <article class="bg-slate-50 border border-slate-200 rounded-2xl p-6">
+          <div class="flex text-gold-400 mb-4">
+            {[1,2,3,4,5].map(() => (
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+              </svg>
+            ))}
+          </div>
+          <blockquote class="text-slate-600 text-sm leading-relaxed mb-6 italic">
+            "Fiz meu implante dentário na Clínica Reali e o resultado superou todas as expectativas. A equipe é extremamente profissional, o atendimento é acolhedor e a estrutura da clínica é impecável. Recomendo sem hesitar para quem busca qualidade real em SJC!"
+          </blockquote>
+          <div class="flex items-center gap-3">
+            <!-- INSERIR: /images/depoimento-1.webp -->
+            <div class="w-10 h-10 bg-brand-200 rounded-full flex items-center justify-center text-brand-700 font-bold text-sm flex-shrink-0">
+              MA
+            </div>
+            <div>
+              <div class="text-navy-800 font-semibold text-sm">Mariana Alves</div>
+              <div class="text-slate-400 text-xs">São José dos Campos · Implante Dentário</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Depoimento 2 -->
+        <article class="bg-slate-50 border border-slate-200 rounded-2xl p-6">
+          <div class="flex text-gold-400 mb-4">
+            {[1,2,3,4,5].map(() => (
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+              </svg>
+            ))}
+          </div>
+          <blockquote class="text-slate-600 text-sm leading-relaxed mb-6 italic">
+            "Tive uma dor de dente horrível na madrugada e a Clínica Reali me atendeu imediatamente! O plantão 24h é de verdade — fui atendido com rapidez e saí sem dor. É a primeira e única clínica que conheço com esse nível de comprometimento com o paciente."
+          </blockquote>
+          <div class="flex items-center gap-3">
+            <!-- INSERIR: /images/depoimento-2.webp -->
+            <div class="w-10 h-10 bg-amber-200 rounded-full flex items-center justify-center text-amber-700 font-bold text-sm flex-shrink-0">
+              RC
+            </div>
+            <div>
+              <div class="text-navy-800 font-semibold text-sm">Ricardo Costa</div>
+              <div class="text-slate-400 text-xs">São José dos Campos · Urgência 24h</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Depoimento 3 -->
+        <article class="bg-slate-50 border border-slate-200 rounded-2xl p-6">
+          <div class="flex text-gold-400 mb-4">
+            {[1,2,3,4,5].map(() => (
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+              </svg>
+            ))}
+          </div>
+          <blockquote class="text-slate-600 text-sm leading-relaxed mb-6 italic">
+            "Realizei a harmonização orofacial na Clínica Reali e ficou absolutamente natural e lindo! A dentista foi cuidadosa, explicou cada etapa do procedimento e o resultado foi exatamente o que eu sonhava. Ambiente super sofisticado e higienizado. Nota 10!"
+          </blockquote>
+          <div class="flex items-center gap-3">
+            <!-- INSERIR: /images/depoimento-3.webp -->
+            <div class="w-10 h-10 bg-purple-200 rounded-full flex items-center justify-center text-purple-700 font-bold text-sm flex-shrink-0">
+              JS
+            </div>
+            <div>
+              <div class="text-navy-800 font-semibold text-sm">Juliana Santos</div>
+              <div class="text-slate-400 text-xs">SJC · Harmonização Orofacial</div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="text-center mt-8">
+        <a
+          href="https://maps.app.goo.gl/2AH4j41vCoMBEBgR8"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 text-brand-600 hover:text-brand-800 font-semibold text-sm transition-colors"
+        >
+          Ver todas as avaliações no Google
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= -->
+  <!-- CONTATO E LOCALIZAÇÃO -->
+  <!-- ============================= -->
+  <section class="py-20 bg-navy-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <span class="text-brand-400 font-semibold text-sm uppercase tracking-wider">Localização</span>
+        <h2 class="text-3xl md:text-4xl font-black text-white mt-2">Venha nos visitar</h2>
+        <p class="text-slate-400 mt-2">Estamos no coração de Vila Adyana, São José dos Campos</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+        <!-- Mapa -->
+        <div class="rounded-2xl overflow-hidden shadow-2xl aspect-video lg:aspect-auto lg:h-96">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.355155999795!2d-45.8977618246807!3d-23.202883679047762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc4bed734891f7%3A0x6695786b8d047551!2sCl%C3%ADnica%20Reali%20Odontologia%20e%20Est%C3%A9tica!5e1!3m2!1spt-BR!2sbr!4v1789784221619!5m2!1spt-BR!2sbr"
+            width="100%"
+            height="100%"
+            style="border:0; min-height: 300px;"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            title="Localização da Clínica Reali Odontologia e Estética no Google Maps"
+          ></iframe>
+        </div>
+
+        <!-- Informações de Contato -->
+        <div class="space-y-6">
+          <div class="bg-navy-800 rounded-2xl p-6 space-y-4">
+            <h3 class="text-white font-bold text-xl mb-4">Informações de Contato</h3>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-brand-900 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-brand-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="text-white font-semibold text-sm">Endereço</div>
+                <div class="text-slate-400 text-sm mt-1">R. Cel. João Cursino, 185<br/>Vila Adyana, São José dos Campos - SP<br/>CEP: 12243-680</div>
+                <a href="https://maps.app.goo.gl/2AH4j41vCoMBEBgR8" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-brand-400 text-xs mt-2 hover:text-brand-300 transition-colors">
+                  Ver no Google Maps →
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-brand-900 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-brand-400" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="text-white font-semibold text-sm">WhatsApp / Telefone</div>
+                <a href="https://wa.me/5512991843883" target="_blank" rel="noopener noreferrer" class="text-brand-400 hover:text-brand-300 text-sm mt-1 block transition-colors">(12) 99184-3883</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-brand-900 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-brand-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="text-white font-semibold text-sm">Horários de Funcionamento</div>
+                <div class="text-slate-400 text-sm mt-1 space-y-0.5">
+                  <div>Segunda a Sexta: 09h às 18h</div>
+                  <div>Sábado: 09h às 13h</div>
+                  <div>Domingo: Fechado</div>
+                  <div class="text-red-400 font-semibold mt-1 flex items-center gap-1.5">
+                    <span class="relative flex h-2 w-2">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                    </span>
+                    Emergências: 24 Horas
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Final -->
+          <a
+            href="https://wa.me/5512991843883?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20na%20Cl%C3%ADnica%20Reali!"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center justify-center gap-3 w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-4 rounded-xl text-lg transition-all duration-200 hover:scale-[1.02] shadow-lg"
+          >
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+            Agendar Consulta pelo WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

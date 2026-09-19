@@ -1,0 +1,28 @@
+# Dependências
+node_modules/
+.npm/
+
+# Build outputs
+dist/
+.output/
+
+# Astro cache
+.astro/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Editor
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS
+.DS_Store
+Thumbs.db

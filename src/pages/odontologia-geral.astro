@@ -1,0 +1,185 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const siteUrl = 'https://clinicaodontologicarealisjc.vercel.app';
+const canonical = `${siteUrl}/odontologia-geral`;
+
+const categories = [
+  {
+    id: 'clinico-preventivo',
+    title: 'Clínico e Preventivo',
+    icon: '🔍',
+    color: 'brand',
+    services: [
+      { name: 'Avaliação e Planejamento', desc: 'Consulta diagnóstica completa com anamnese, exame clínico, radiográfico e elaboração de plano de tratamento personalizado.' },
+      { name: 'Orientação de Higiene Bucal', desc: 'Técnicas corretas de escovação, uso do fio dental e produtos de higiene bucal adequados ao perfil de cada paciente.' },
+      { name: 'Tratamento de Cárie', desc: 'Remoção do tecido cariado e restauração com materiais biocompatíveis de alta resistência e estética.' },
+      { name: 'Restauração em Resina Composta', desc: 'Restaurações estéticas e funcionais em resina composta de última geração, com excelente cor e durabilidade.' },
+      { name: 'Selante Dental', desc: 'Proteção de fissuras e sulcos dos dentes posteriores, prevenindo o desenvolvimento de cárie em regiões de difícil higienização.' },
+      { name: 'Aplicação de Flúor', desc: 'Aplicação tópica de flúor em gel ou verniz para fortalecer o esmalte dental e prevenir a cárie, especialmente indicado para crianças.' },
+    ]
+  },
+  {
+    id: 'odontopediatria',
+    title: 'Odontopediatria — Atendimento Infantil',
+    icon: '👶',
+    color: 'blue',
+    services: [
+      { name: 'Primeira Consulta Infantil', desc: 'Atendimento especializado e acolhedor para crianças a partir dos primeiros dentes. Criamos uma experiência positiva que garante crianças sem medo do dentista.' },
+      { name: 'Prevenção na Infância', desc: 'Selantes, flúor, orientações de higiene para os pais e acompanhamento do desenvolvimento da dentição.' },
+      { name: 'Restaurações Infantis', desc: 'Tratamento de cárie em dentes de leite e permanentes com técnicas adaptadas ao atendimento pediátrico.' },
+      { name: 'Espaço Mantenedor', desc: 'Dispositivos que mantêm o espaço para os dentes permanentes quando há perda precoce de dentes de leite.' },
+    ]
+  },
+  {
+    id: 'especialidades',
+    title: 'Especialidades Odontológicas',
+    icon: '⚙️',
+    color: 'slate',
+    services: [
+      { name: 'Tratamento de Bruxismo', desc: 'Diagnóstico e tratamento do apertamento e ranger de dentes com placa miorrelaxante personalizada, além de toxina botulínica nos masséteres quando indicado.' },
+      { name: 'Prótese Parcial Removível', desc: 'Prótese removível para substituição de um ou mais dentes ausentes, confeccionada em acrílico ou metálica (esquelética).' },
+      { name: 'Prótese Total (Dentadura)', desc: 'Confecção de próteses totais convencionais e sobre implantes, com ajustes para máximo conforto e função mastigatória.' },
+      { name: 'Exodontia Simples', desc: 'Extração de dentes com comprometimento estrutural irreversível, realizada com técnica minimamente invasiva para maior conforto pós-operatório.' },
+      { name: 'Exodontia de Siso', desc: 'Remoção de terceiros molares (sisos) inclusos ou semi-inclusos, com planejamento tomográfico e técnica cirúrgica avançada.' },
+      { name: 'Endodontia — Tratamento de Canal', desc: 'Tratamento do canal radicular para dentes com comprometimento pulpar por cárie, trauma ou infecção, salvando dentes que seriam extraídos.' },
+      { name: 'Retratamento Endodôntico', desc: 'Novo tratamento de canal em dentes com falha no tratamento anterior, com tecnologia de localização eletrônica dos canais e instrumentação mecanizada.' },
+    ]
+  },
+  {
+    id: 'ortodontia',
+    title: 'Ortodontia',
+    icon: '😬',
+    color: 'purple',
+    services: [
+      { name: 'Aparelho Ortodôntico Fixo (Metálico)', desc: 'Tratamento ortodôntico convencional com bráquetes metálicos de alta performance para correção de má-oclusão, apinhamentos e espaçamentos.' },
+      { name: 'Aparelho Fixo Estético (Cerâmico ou Safira)', desc: 'Mesma eficácia do aparelho metálico com bráquetes de cerâmica ou safira que se confundem com a cor dos dentes — discreção e estética.' },
+      { name: 'Alinhadores Invisíveis (Invisalign®)', desc: 'Tratamento ortodôntico com placas plásticas transparentes e removíveis, trocadas a cada 1–2 semanas. Sem bráquetes, sem fio, praticamente invisível.' },
+      { name: 'Contenção Ortodôntica', desc: 'Dispositivos fixos ou removíveis usados após o término do tratamento ortodôntico para manter a posição dos dentes corrigidos.' },
+    ]
+  },
+  {
+    id: 'periodontia',
+    title: 'Periodontia',
+    icon: '🦠',
+    color: 'teal',
+    services: [
+      { name: 'Raspagem e Alisamento Radicular', desc: 'Limpeza profunda abaixo da gengiva para remover tártaro e biofilme bacteriano que causam a periodontite (doença da gengiva).' },
+      { name: 'Cirurgia Periodontal', desc: 'Procedimento cirúrgico para acesso a bolsas periodontais profundas, redução de bolsas e regeneração de tecido de suporte dental.' },
+      { name: 'Tratamento de Gengivite', desc: 'Controle da inflamação gengival inicial com profilaxia, orientação de higiene e acompanhamento profissional.' },
+      { name: 'Tratamento de Periodontite', desc: 'Tratamento da inflamação avançada que compromete osso e ligamento periodontal, incluindo raspagem, cirurgia e manutenção regular.' },
+      { name: 'Enxerto Gengival', desc: 'Procedimento cirúrgico para cobertura de raízes expostas e aumento da faixa de gengiva queratinizada, melhorando estética e proteção.' },
+      { name: 'Manutenção Periodontal', desc: 'Profilaxia e avaliação periódica para pacientes com histórico de doença periodontal, prevenindo recidivas.' },
+      { name: 'Tratamento de Periimplantite', desc: 'Tratamento da inflamação ao redor de implantes dentários, protegendo a osseointegração e prolongando a vida do implante.' },
+      { name: 'Regeneração Óssea Guiada (ROG)', desc: 'Técnica cirúrgica que utiliza membranas e enxertos para regenerar osso perdido por periodontite, reabilitando estruturas de suporte dental.' },
+      { name: 'Corticotomia para Ortodontia', desc: 'Procedimento cirúrgico que acelera o movimento dentário durante tratamento ortodôntico, reduzindo o tempo total do tratamento.' },
+    ]
+  },
+];
+
+const colorMap: Record<string, string> = {
+  brand: 'bg-brand-50 border-brand-200 hover:border-brand-400',
+  blue:  'bg-blue-50 border-blue-200 hover:border-blue-400',
+  slate: 'bg-slate-50 border-slate-200 hover:border-slate-400',
+  purple:'bg-purple-50 border-purple-200 hover:border-purple-400',
+  teal:  'bg-teal-50 border-teal-200 hover:border-teal-400',
+};
+
+const headerColorMap: Record<string, string> = {
+  brand: 'bg-brand-600',
+  blue:  'bg-blue-600',
+  slate: 'bg-slate-700',
+  purple:'bg-purple-600',
+  teal:  'bg-teal-600',
+};
+---
+
+<Layout
+  title="Odontologia Geral em São José dos Campos | Clínica Reali"
+  description="Odontologia Geral completa em SJC: prevenção, restauração, canal, ortodontia, periodontia, odontopediatria e muito mais. Clínica Reali — Vila Adyana, São José dos Campos."
+  canonical={canonical}
+>
+  <!-- HERO -->
+  <section class="bg-gradient-to-br from-navy-900 to-slate-800 py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block bg-slate-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4">Catálogo Completo</span>
+      <h1 class="text-4xl md:text-5xl font-black text-white mb-4">
+        Odontologia Geral<br/>
+        <span class="text-brand-400">Completa em SJC</span>
+      </h1>
+      <p class="text-slate-300 text-lg max-w-2xl mx-auto mb-8">
+        Da prevenção às especialidades avançadas — todos os tratamentos que você precisa em um único lugar, com a qualidade e o cuidado que você merece.
+      </p>
+      <a
+        href="https://wa.me/5512991843883?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20de%20odontologia%20geral%20na%20Clínica%20Reali!"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-bold px-8 py-4 rounded-xl text-lg transition-all hover:scale-105"
+      >
+        Agendar Consulta
+      </a>
+    </div>
+  </section>
+
+  <!-- CATEGORIAS DE SERVIÇOS -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Âncoras de navegação -->
+      <nav class="flex flex-wrap gap-2 mb-12 justify-center" aria-label="Ir para categoria">
+        {categories.map(cat => (
+          <a
+            href={`#${cat.id}`}
+            class={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium border transition-colors ${colorMap[cat.color]}`}
+          >
+            <span aria-hidden="true">{cat.icon}</span>
+            {cat.title}
+          </a>
+        ))}
+      </nav>
+
+      <div class="space-y-16">
+        {categories.map(cat => (
+          <div id={cat.id}>
+            <!-- Cabeçalho da categoria -->
+            <div class={`flex items-center gap-3 mb-6 pb-4 border-b border-slate-200`}>
+              <div class={`w-10 h-10 ${headerColorMap[cat.color]} rounded-xl flex items-center justify-center text-xl text-white`} aria-hidden="true">
+                {cat.icon}
+              </div>
+              <h2 class="text-2xl md:text-3xl font-black text-navy-900">{cat.title}</h2>
+            </div>
+
+            <!-- Grid de serviços -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {cat.services.map(service => (
+                <div class={`border rounded-xl p-5 transition-all duration-200 cursor-default ${colorMap[cat.color]}`}>
+                  <h3 class="text-navy-800 font-bold text-base mb-2">{service.name}</h3>
+                  <p class="text-slate-600 text-sm leading-relaxed">{service.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="bg-brand-700 py-14">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-black text-white mb-4">Não encontrou o que procura?</h2>
+      <p class="text-brand-100 text-lg mb-8">Entre em contato — nossa equipe vai te orientar sobre o melhor tratamento para a sua necessidade.</p>
+      <a
+        href="https://wa.me/5512991843883?text=Ol%C3%A1%2C%20gostaria%20de%20tirar%20uma%20dúvida%20sobre%20tratamentos%20na%20Clínica%20Reali!"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 bg-white hover:bg-brand-50 text-brand-700 font-bold px-8 py-4 rounded-xl text-lg transition-all hover:scale-105"
+      >
+        <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+        Falar no WhatsApp
+      </a>
+    </div>
+  </section>
+</Layout>
