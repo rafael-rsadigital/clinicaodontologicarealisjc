@@ -1,178 +1,217 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
 const siteUrl = 'https://clinicaodontologicarealisjc.vercel.app';
 const canonical = `${siteUrl}/implantes-e-proteses`;
+
+const faqSchema = [
+  { question: 'Quanto tempo dura um implante dentário?', answer: 'Um implante dentário bem instalado e com manutenção adequada pode durar a vida toda. A durabilidade depende da higiene oral, saúde sistêmica do paciente e acompanhamento periódico com o dentista.' },
+  { question: 'O procedimento de implante dentário é doloroso?', answer: 'Não. O implante é realizado sob anestesia local, sem dor durante o procedimento. O desconforto pós-operatório é leve a moderado e controlado com analgésicos por 2 a 4 dias.' },
+  { question: 'Qual a diferença entre All-on-4 e All-on-6?', answer: 'O All-on-4 utiliza quatro implantes para suportar uma arcada completa, enquanto o All-on-6 usa seis implantes, oferecendo maior distribuição de carga e estabilidade. A indicação depende do volume ósseo e das necessidades de cada paciente.' },
+  { question: 'É possível fazer implante com pouco osso na maxila?', answer: 'Sim. Para casos com pouco volume ósseo, realizamos enxerto ósseo, levantamento de seio maxilar ou implante zigomático. O planejamento digital 3D permite avaliar cada caso e indicar a melhor solução.' },
+  { question: 'Quanto tempo leva para o implante estar pronto?', answer: 'O processo completo dura em média 3 a 6 meses, que é o tempo necessário para a osseointegração. Com a técnica de carga imediata, o paciente sai da cirurgia com dentes provisórios fixos no mesmo dia.' }
+];
 
 const procedures = [
   {
     id: 'implante-unitario',
-    title: 'Implante Dentário Unitário',
-    icon: '🦷',
-    summary: 'Substituição de um único dente perdido com resultado natural e permanente.',
-    content: `O implante dentário unitário é a solução mais avançada e duradoura para substituir um dente perdido. Trata-se de um parafuso de titânio — biocompatível com o organismo — que é inserido no osso da mandíbula ou maxila e funciona como a raiz do novo dente. Sobre ele, fixamos uma coroa de porcelana personalizada que imita perfeitamente o aspecto e a função do dente natural.
+    h2: 'Implante Dentário Unitário em São José dos Campos',
+    content: `O implante dentário unitário é a solução definitiva para substituir um único dente perdido, devolvendo função, estética e preservando o osso alveolar. Diferente de pontes fixas, o implante não exige desgaste dos dentes vizinhos — um parafuso de titânio biocompatível é inserido no osso e integrado ao organismo, sobre o qual fixamos uma coroa de porcelana personalizada que reproduz com fidelidade o aspecto do dente natural.
 
-Na Clínica Reali, utilizamos implantes das marcas mais confiáveis do mercado e realizamos planejamento digital 3D para garantir máxima precisão no posicionamento. O resultado é um dente estável, resistente e indistinguível dos demais — com durabilidade que pode ser vitalícia com os cuidados adequados.
+Na Clínica Reali em São José dos Campos, todo caso de implante é planejado digitalmente com tomografia computadorizada (CBCT). Esse planejamento permite prever com precisão o posicionamento do implante, evitar estruturas nobres e fabricar guias cirúrgicos que tornam a cirurgia mais segura e previsível.
 
-Indicado para pacientes que perderam um ou mais dentes por cárie, fratura, periodontite ou trauma, e que possuem volume ósseo adequado ou que passarão por enxerto prévio.`,
+Indicado para pacientes com perda dentária por cárie, fratura, periodontite ou trauma. O tempo de tratamento varia de 3 a 6 meses, contemplando o período de osseointegração.`
   },
   {
     id: 'all-on-4-all-on-6',
-    title: 'Prótese Protocolo — All-on-4 e All-on-6',
-    icon: '😁',
-    summary: 'Reabilitação oral completa com apenas 4 ou 6 implantes por arcada.',
-    content: `A Prótese Protocolo, também conhecida como All-on-4 ou All-on-6, é a solução revolucionária para pacientes que perderam todos ou a maioria dos dentes de uma arcada. Com apenas 4 ou 6 implantes estrategicamente posicionados, é possível fixar uma arcada dentária completa — devolvendo função mastigatória, estética e autoestima.
+    h2: 'Prótese Protocolo All-on-4 e All-on-6',
+    content: `A Prótese Protocolo — conhecida pelos protocolos All-on-4 e All-on-6 — é a solução de referência para pacientes que perderam todos ou a maioria dos dentes de uma arcada. Com apenas 4 ou 6 implantes estrategicamente posicionados, é possível fixar uma arcada dentária completa de forma permanente e estável.
 
-O All-on-4 utiliza quatro implantes com angulação específica para maximizar o contato ósseo mesmo em regiões com pouco volume de osso, eliminando a necessidade de enxerto em muitos casos. O All-on-6 oferece ainda mais estabilidade e distribuição de carga com seis implantes.
+O All-on-4 utiliza quatro implantes com angulação específica que maximiza o contato com o osso disponível, permitindo, na maioria dos casos, evitar enxertos. O All-on-6 oferece maior distribuição de carga, sendo indicado quando a densidade e o volume ósseo permitem a instalação de mais fixações.
 
-Na Clínica Reali, o planejamento é totalmente digital — com tomografia, modelos 3D e guia cirúrgico — garantindo cirurgias mais previsíveis, seguras e com menor tempo de recuperação.`,
+Todo o planejamento é realizado digitalmente na Clínica Reali: tomografia 3D, modelo virtual, wax-up digital e guia cirúrgico garantem cirurgias mais rápidas, resultados previsíveis e menor tempo de recuperação.`
   },
   {
     id: 'carga-imediata',
-    title: 'Prótese Protocolo com Carga Imediata',
-    icon: '⚡',
-    summary: 'Saía da cirurgia com dentes fixos no mesmo dia.',
-    content: `A Carga Imediata é uma evolução da Prótese Protocolo: os implantes são instalados e uma prótese provisória é fixada no mesmo dia da cirurgia. O paciente vai para casa com dentes fixos — sem passar pelo período com prótese removível, que é incômodo e limita a alimentação.
+    h2: 'Implante com Carga Imediata — Dentes Fixos no Mesmo Dia',
+    content: `A carga imediata é uma evolução da Prótese Protocolo que permite instalar uma prótese provisória fixa no mesmo dia da cirurgia de implantes. O paciente não passa pelo período com prótese removível — vai para casa com dentes fixos e funcionais já na primeira consulta.
 
-Essa técnica exige planejamento rigoroso e avaliação criteriosa das condições do paciente — densidade óssea, saúde geral e posicionamento dos implantes. Quando bem indicada, a Carga Imediata é uma das experiências mais transformadoras em odontologia, com alto índice de satisfação.
+Essa técnica exige avaliação rigorosa da densidade óssea, saúde geral e planejamento cirúrgico minucioso. Quando bem indicada, é uma das experiências mais transformadoras em odontologia moderna, com índice de satisfação elevado.
 
-Após a osseointegração completa (em média 3 a 6 meses), a prótese provisória é substituída pela prótese definitiva em zircônia ou titânio com acabamento em porcelana.`,
+Após o período de osseointegração (em média 3 a 6 meses), a prótese provisória é substituída pela prótese definitiva em zircônia ou porcelana com acabamento premium.`
   },
   {
     id: 'implante-zigomatico',
-    title: 'Implante Zigomático',
-    icon: '🔩',
-    summary: 'Solução para casos complexos de reabsorção óssea severa.',
-    content: `O Implante Zigomático é indicado para pacientes com perda óssea severa na maxila, onde não é possível instalar implantes convencionais nem realizar enxertos extensos. Nesses casos, os implantes são ancorados no osso zigomático (malar), que é denso e robusto — oferecendo excelente estabilidade primária.
+    h2: 'Implante Zigomático — Reabilitação em Casos Complexos',
+    content: `O implante zigomático é indicado para pacientes com reabsorção óssea severa na maxila, onde não é viável instalar implantes convencionais nem realizar enxertos extensos. Os implantes são ancorados no osso zigomático (malar), que é denso e estável — fornecendo excelente suporte primário.
 
-É um procedimento de alta complexidade, realizado por implantodontistas com treinamento especializado. Na Clínica Reali, contamos com equipe experiente e infraestrutura avançada para realizar essa cirurgia com segurança e excelência.
+Trata-se de um procedimento de alta complexidade, realizado por cirurgiões com treinamento específico. Na Clínica Reali, dispomos de equipe experiente e infraestrutura adequada para planejar e executar essa cirurgia com segurança.
 
-Frequentemente utilizado em conjunto com implantes convencionais na região anterior, o implante zigomático permite a reabilitação completa da maxila em casos que antes eram considerados sem solução.`,
+Frequentemente combinado com implantes convencionais na região anterior, o implante zigomático viabiliza a reabilitação completa da maxila em casos que antes pareciam sem solução.`
   },
   {
     id: 'enxerto-osseo',
-    title: 'Enxerto Ósseo',
-    icon: '🧬',
-    summary: 'Reconstrução do volume ósseo para viabilizar implantes.',
-    content: `O enxerto ósseo é um procedimento preparatório fundamental para pacientes com volume ósseo insuficiente para receber implantes. Consiste na adição de material ósseo — que pode ser do próprio paciente, de banco de osso, material bovino ou sintético — para regenerar e aumentar o volume da crista alveolar.
+    h2: 'Enxerto Ósseo e Regeneração Óssea Guiada',
+    content: `O enxerto ósseo reconstrói o volume do osso alveolar em regiões com atrofia, criando condições favoráveis para a instalação de implantes. O material enxertoso pode ser do próprio paciente (autógeno), de banco de osso, bovino ou sintético — escolhido conforme o volume necessário e as características clínicas do caso.
 
-Existem diferentes técnicas: enxerto em bloco, enxerto particulado com membrana (ROG — Regeneração Óssea Guiada) e combinações. A escolha depende do volume de osso necessário e das características clínicas de cada caso.
+A Regeneração Óssea Guiada (ROG) associa o enxerto ao uso de membranas que isolam o coágulo e orientam a formação do novo tecido ósseo. É uma técnica consagrada e segura, com alta previsibilidade de resultado.
 
-Na Clínica Reali, realizamos enxertos com materiais de alta qualidade e comprovada biocompatibilidade, sempre planejados digitalmente para otimizar o resultado e minimizar desconfortos pós-operatórios.`,
+Todo enxerto na Clínica Reali é planejado digitalmente para otimizar o volume ganho e minimizar o desconforto pós-operatório.`
   },
   {
     id: 'levantamento-seio',
-    title: 'Levantamento de Seio Maxilar',
-    icon: '📐',
-    summary: 'Criação de volume ósseo na região posterior da maxila.',
-    content: `O levantamento de seio maxilar — também chamado de sinus lift — é indicado quando há insuficiência óssea vertical na região posterior da maxila, próxima aos seios paranasais. A técnica eleva a membrana sinusal e preenche o espaço com material enxertoso, criando altura óssea suficiente para a instalação de implantes.
+    h2: 'Levantamento de Seio Maxilar (Sinus Lift)',
+    content: `O levantamento de seio maxilar é indicado para pacientes com insuficiência óssea vertical na região posterior da maxila — onde o seio paranasal reduz a altura disponível para implantes. O procedimento eleva a membrana sinusal e preenche o espaço com material enxertoso, criando altura suficiente para a fixação segura dos implantes.
 
-Pode ser realizado pela técnica aberta (janela lateral), indicada para ganhos ósseos maiores, ou pela técnica fechada (transalveolar), para casos com menor déficit. O planejamento por tomografia é essencial para avaliar a anatomia do seio e planejar a cirurgia com segurança.
+Existem duas técnicas principais: a aberta (janela lateral), indicada para ganhos maiores, e a fechada (transalveolar), para casos com menor déficit. A tomografia computadorizada é essencial para avaliar a anatomia individual e planejar a cirurgia com segurança.
 
-Nossos cirurgiões têm vasta experiência nessa técnica, garantindo resultados previsíveis e seguros.`,
+Na Clínica Reali, o sinus lift é realizado por cirurgiões experientes nessa técnica, com resultados previsíveis e seguros.`
   },
   {
     id: 'planejamento-digital',
-    title: 'Planejamento Digital de Implantes',
-    icon: '💻',
-    summary: 'Tecnologia 3D para implantes precisos e seguros.',
-    content: `O planejamento digital de implantes é o padrão-ouro em implantodontia moderna. Com base na tomografia computadorizada (CBCT) do paciente, criamos um modelo tridimensional virtual para simular a posição ideal de cada implante — considerando anatomia óssea, nervos, vasos e o perfil estético desejado.
+    h2: 'Planejamento Digital de Implantes',
+    content: `O planejamento digital é o padrão atual em implantodontia de qualidade. A partir da tomografia computadorizada do paciente, criamos um modelo tridimensional que permite simular a posição ideal de cada implante — respeitando a anatomia, os nervos, os vasos e o perfil estético desejado.
 
-A partir desse planejamento, é possível confeccionar um guia cirúrgico que direciona com exatidão a posição, angulação e profundidade de cada implante durante a cirurgia. Isso resulta em procedimentos mais rápidos, seguros e com resultados mais previsíveis.
+Com base nesse planejamento, confeccionamos um guia cirúrgico que direciona com milimétrica precisão a posição, angulação e profundidade de cada implante durante a cirurgia. O resultado é um procedimento mais seguro, mais rápido e com resultados mais previsíveis.
 
-Na Clínica Reali, o planejamento digital está disponível para todos os casos de implante, desde unitários até casos de All-on-4 e All-on-6.`,
+Disponível para todos os casos de implante na Clínica Reali em SJC — de unitários a reabilitações completas.`
   },
   {
     id: 'coroa-implante',
-    title: 'Coroa sobre Implante',
-    icon: '👑',
-    summary: 'Restauração estética e funcional sobre o implante osseointegrado.',
-    content: `Após a osseointegração do implante (fusão com o osso), é instalado o componente protético chamado de coroa sobre implante. Essa coroa pode ser confeccionada em zircônia (para maior estética), metal-cerâmica ou e.max — escolhida de acordo com a localização do dente e as preferências estéticas do paciente.
+    h2: 'Coroa sobre Implante',
+    content: `Após a osseointegração completa, instala-se o componente protético definitivo: a coroa sobre implante. Pode ser fabricada em zircônia (máxima estética e resistência), e.max (cerâmica prensada) ou metal-cerâmica — conforme a localização do dente e as preferências do paciente.
 
-Na Clínica Reali, as coroas são escaneadas digitalmente e confeccionadas por laboratórios parceiros de alta qualidade, garantindo encaixe preciso, coloração compatível com os dentes naturais e acabamento premium.
+Na Clínica Reali, as coroas são escaneadas digitalmente e confeccionadas por laboratórios especializados, garantindo encaixe preciso, coloração compatível com os dentes naturais e acabamento premium.
 
-O resultado é um dente que ninguém consegue distinguir dos demais — funcional, estético e duradouro.`,
+O resultado final é uma coroa indistinguível dos dentes naturais — funcional, estética e com durabilidade de longo prazo.`
   },
   {
     id: 'manutencao',
-    title: 'Manutenção de Implantes',
-    icon: '🔧',
-    summary: 'Protocolo de acompanhamento para garantir a longevidade dos implantes.',
-    content: `A manutenção periódica é essencial para garantir a longevidade dos implantes dentários. Durante as consultas de manutenção, realizamos: limpeza profissional com instrumentos específicos para implantes, avaliação da saúde da gengiva perimplantar, verificação do torque dos parafusos da prótese e análise radiográfica do nível ósseo.
+    h2: 'Manutenção e Acompanhamento de Implantes',
+    content: `A manutenção periódica é fundamental para a longevidade dos implantes dentários. Nas consultas de acompanhamento, realizamos: profilaxia com instrumentos específicos para superfícies de titânio, avaliação da saúde gengival perimplantar, verificação do torque dos parafusos protéticos e análise radiográfica do nível ósseo.
 
-A periimplantite — inflamação ao redor do implante causada por biofilme bacteriano — é a principal ameaça à longevidade dos implantes e pode ser evitada com manutenção regular e higiene oral adequada.
+A periimplantite — inflamação ao redor do implante causada por acúmulo de biofilme — é a principal causa de perda de implantes a longo prazo e pode ser prevenida com manutenção regular e higiene oral correta.
 
-Recomendamos manutenção a cada 3 a 6 meses, conforme o risco individual de cada paciente.`,
-  },
+Recomendamos retorno a cada 4 a 6 meses, ajustado ao perfil de risco de cada paciente.`
+  }
 ];
 ---
 
 <Layout
-  title="Implantes Dentários e Próteses em São José dos Campos | Clínica Reali"
-  description="Especialistas em implante dentário, All-on-4, All-on-6, carga imediata, implante zigomático, enxerto ósseo e próteses em São José dos Campos — SP. Planejamento digital. Agende!"
+  title="Implante Dentário em São José dos Campos — All-on-4, All-on-6 e Carga Imediata"
+  description="Especialistas em implante dentário em São José dos Campos — SP. All-on-4, All-on-6, carga imediata, implante zigomático e enxerto ósseo. Planejamento digital 3D. Clínica Reali, Vila Adyana."
   canonical={canonical}
+  {faqSchema}
 >
   <!-- HERO -->
-  <section class="bg-gradient-to-br from-navy-900 to-navy-800 py-16 md:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <span class="inline-block bg-brand-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4">Especialidade</span>
-      <h1 class="text-4xl md:text-5xl font-black text-white mb-4">
-        Implantes Dentários e Próteses<br/>
-        <span class="text-brand-400">em São José dos Campos</span>
-      </h1>
-      <p class="text-slate-300 text-lg max-w-2xl mx-auto mb-8">
-        Reabilitação oral completa com tecnologia de ponta, planejamento digital 3D e equipe especializada. Do implante unitário ao All-on-4 com carga imediata.
-      </p>
-      <a
-        href="https://wa.me/5512991843883?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20implantes%20dentários%20na%20Clínica%20Reali!"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-bold px-8 py-4 rounded-xl text-lg transition-all hover:scale-105"
-      >
-        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-        </svg>
-        Agendar Avaliação Gratuita
-      </a>
+  <section class="bg-slate-900 py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <nav class="text-slate-500 text-xs mb-4" aria-label="Breadcrumb">
+          <a href="/" class="hover:text-slate-300">Início</a>
+          <span class="mx-1">/</span>
+          <span class="text-slate-300">Implantes e Próteses</span>
+        </nav>
+        <h1 class="text-3xl md:text-4xl font-bold text-white leading-tight mb-4">
+          Implante Dentário em<br/>
+          <span class="text-emerald-400">São José dos Campos</span>
+        </h1>
+        <p class="text-slate-300 leading-relaxed mb-6">
+          Reabilitação oral completa com planejamento digital 3D e equipe especializada em implantodontia. Do implante unitário ao All-on-4 e All-on-6 com carga imediata.
+        </p>
+        <a
+          href="https://wa.me/5512991843883?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20sobre%20implante%20dent%C3%A1rio%20na%20Cl%C3%ADnica%20Reali!"
+          target="_blank" rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 bg-emerald-700 hover:bg-emerald-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+        >
+          Agendar Avaliação
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- PROCEDIMENTOS -->
+  <!-- CONTEÚDO -->
   <section class="py-16 bg-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="space-y-12">
+
+      <!-- Destaque -->
+      <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-6 mb-12">
+        <h2 class="text-slate-900 font-semibold mb-3">Por que escolher a Clínica Reali para implantes em SJC?</h2>
+        <ul class="space-y-2 text-slate-600 text-sm">
+          {[
+            'Planejamento digital com tomografia CBCT e guia cirúrgico',
+            'Equipe especializada em implantodontia com casos de alta complexidade',
+            'Implantes de marcas certificadas pelo INMETRO',
+            'Localização central em Vila Adyana, São José dos Campos',
+            'Nota 4.9 no Google em 57 avaliações de pacientes reais'
+          ].map(item => (
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Procedimentos -->
+      <div class="space-y-14">
         {procedures.map((proc, index) => (
-          <article id={proc.id} class={`rounded-2xl p-8 ${index % 2 === 0 ? 'bg-slate-50 border border-slate-200' : 'bg-white border border-brand-100'}`}>
-            <div class="flex items-start gap-4">
-              <span class="text-3xl flex-shrink-0" aria-hidden="true">{proc.icon}</span>
-              <div>
-                <h2 class="text-2xl font-black text-navy-900 mb-2">{proc.title}</h2>
-                <p class="text-brand-700 font-semibold text-sm mb-4">{proc.summary}</p>
-                <div class="text-slate-600 leading-relaxed whitespace-pre-line text-sm md:text-base">{proc.content}</div>
-              </div>
-            </div>
+          <article id={proc.id}>
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">{proc.h2}</h2>
+            <div class="text-slate-600 leading-relaxed whitespace-pre-line">{proc.content}</div>
+            {index < procedures.length - 1 && <hr class="mt-12 border-slate-100"/>}
           </article>
         ))}
       </div>
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section class="py-16 bg-slate-50">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-emerald-700 text-sm font-semibold uppercase tracking-wider mb-2">FAQ</p>
+      <h2 class="text-2xl font-bold text-slate-900 mb-8">Perguntas frequentes sobre implante dentário em SJC</h2>
+      <div class="space-y-1">
+        {faqSchema.map((item) => (
+          <div class="faq-item border border-slate-200 rounded-xl overflow-hidden bg-white">
+            <button class="faq-question w-full flex items-center justify-between gap-4 px-5 py-4 text-left text-slate-800 font-medium hover:bg-slate-50 transition-colors" aria-expanded="false">
+              <span>{item.question}</span>
+              <svg class="faq-icon w-4 h-4 text-slate-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+            </button>
+            <div class="faq-answer hidden px-5 pb-4">
+              <p class="text-slate-600 text-sm leading-relaxed">{item.answer}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
   <!-- CTA FINAL -->
-  <section class="bg-brand-700 py-16">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl font-black text-white mb-4">Pronto para transformar seu sorriso?</h2>
-      <p class="text-brand-100 text-lg mb-8">Agende uma avaliação com nossa equipe e descubra o melhor tratamento para o seu caso. Atendemos em São José dos Campos — SJC.</p>
-      <a
-        href="https://wa.me/5512991843883?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20implante%20dentário%20na%20Clínica%20Reali!"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-flex items-center gap-2 bg-white hover:bg-brand-50 text-brand-700 font-bold px-8 py-4 rounded-xl text-lg transition-all hover:scale-105"
-      >
-        <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-        </svg>
-        Falar com Especialista Agora
+  <section class="py-14 bg-slate-900">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h2 class="text-2xl font-bold text-white mb-3">Agende uma avaliação de implante em São José dos Campos</h2>
+      <p class="text-slate-400 mb-6">Nossa equipe analisa seu caso, apresenta o plano de tratamento e os custos antes de qualquer procedimento.</p>
+      <a href="https://wa.me/5512991843883?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20implante%20dent%C3%A1rio%20na%20Cl%C3%ADnica%20Reali!" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-emerald-700 hover:bg-emerald-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors">
+        Falar com especialista
       </a>
     </div>
   </section>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const answer = btn.nextElementSibling as HTMLElement | null;
+        const icon = btn.querySelector('.faq-icon') as HTMLElement | null;
+        const isOpen = answer && !answer.classList.contains('hidden');
+        document.querySelectorAll('.faq-answer').forEach(a => (a as HTMLElement).classList.add('hidden'));
+        document.querySelectorAll('.faq-icon').forEach(ic => { (ic as HTMLElement).style.transform = 'rotate(0deg)'; });
+        document.querySelectorAll('.faq-question').forEach(q => q.setAttribute('aria-expanded', 'false'));
+        if (!isOpen && answer) {
+          answer.classList.remove('hidden');
+          if (icon) icon.style.transform = 'rotate(45deg)';
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  </script>
 </Layout>
