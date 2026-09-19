@@ -25,7 +25,7 @@ const organizationSchema = {
       "@type": ["Dentist", "LocalBusiness"],
       "@id": `${siteUrl}/#organization`,
       "name": "Clínica Reali Odontologia e Estética",
-      "description": "Clínica odontológica em São José dos Campos, especializada em implantes dentários, harmonização orofacial e atendimento de urgência 24h. Vila Adyana, SJC — SP.",
+      "description": "Clínica odontológica em São José dos Campos, com foco em implantes dentários, harmonização orofacial, estética dental e tratamentos odontológicos. Vila Adyana — SP.",
       "url": siteUrl,
       "telephone": "+55-12-99184-3883",
       "image": `${siteUrl}/images/og-image.webp`,
@@ -76,16 +76,7 @@ const organizationSchema = {
         "https://maps.app.goo.gl/2AH4j41vCoMBEBgR8"
       ],
       "hasMap": "https://maps.app.goo.gl/2AH4j41vCoMBEBgR8",
-      "medicalSpecialty": [
-        "Implantologia",
-        "Harmonização Orofacial",
-        "Ortodontia",
-        "Periodontia",
-        "Endodontia",
-        "Odontopediatria",
-        "Estética Dental",
-        "Urgência Odontológica 24h"
-      ],
+      "medicalSpecialty": ["Implantologia","Harmonização Orofacial","Ortodontia","Periodontia","Endodontia","Estética Dental"],
       "areaServed": {
         "@type": "City",
         "name": "São José dos Campos",
@@ -156,7 +147,7 @@ const faqPageSchema = faqSchema.length > 0 ? {
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
@@ -165,6 +156,11 @@ const faqPageSchema = faqSchema.length > 0 ? {
     {faqPageSchema && (
       <script type="application/ld+json" set:html={JSON.stringify(faqPageSchema)} />
     )}
+      <style>
+      body { font-family: 'DM Sans', sans-serif; }
+      h1, h2 { font-family: 'DM Serif Display', serif; font-weight: 400; letter-spacing: -0.01em; }
+      h3 { font-family: 'DM Sans', sans-serif; }
+    </style>
   </head>
   <body class="font-sans antialiased bg-white text-slate-900">
 
@@ -192,13 +188,6 @@ const faqPageSchema = faqSchema.length > 0 ? {
             <a href="/implantes-e-proteses" class="text-slate-600 hover:text-slate-900 px-3 py-2 rounded-md text-sm font-medium transition-colors">Implantes</a>
             <a href="/estetica-e-harmonizacao" class="text-slate-600 hover:text-slate-900 px-3 py-2 rounded-md text-sm font-medium transition-colors">Estética</a>
             <a href="/odontologia-geral" class="text-slate-600 hover:text-slate-900 px-3 py-2 rounded-md text-sm font-medium transition-colors">Serviços</a>
-            <a href="/urgencia-24h" class="flex items-center gap-1.5 text-red-600 hover:text-red-700 px-3 py-2 rounded-md text-sm font-semibold transition-colors">
-              <span class="relative flex h-1.5 w-1.5">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-red-500"></span>
-              </span>
-              Urgência 24h
-            </a>
           </nav>
 
           <!-- CTA + Hamburger -->
@@ -240,13 +229,6 @@ const faqPageSchema = faqSchema.length > 0 ? {
           <a href="/implantes-e-proteses" class="block px-3 py-2 text-slate-700 hover:bg-slate-50 rounded-md text-sm font-medium">Implantes e Próteses</a>
           <a href="/estetica-e-harmonizacao" class="block px-3 py-2 text-slate-700 hover:bg-slate-50 rounded-md text-sm font-medium">Estética e Harmonização</a>
           <a href="/odontologia-geral" class="block px-3 py-2 text-slate-700 hover:bg-slate-50 rounded-md text-sm font-medium">Odontologia Geral</a>
-          <a href="/urgencia-24h" class="flex items-center gap-2 px-3 py-2 text-red-600 hover:bg-red-50 rounded-md text-sm font-semibold">
-            <span class="relative flex h-1.5 w-1.5">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-red-500"></span>
-            </span>
-            Urgência Odontológica 24h
-          </a>
           <div class="pt-2 border-t border-slate-100">
             <a
               href="https://wa.me/5512991843883?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta!"
@@ -285,7 +267,7 @@ const faqPageSchema = faqSchema.length > 0 ? {
               </div>
             </a>
             <p class="text-slate-500 text-sm leading-relaxed mb-5 max-w-sm">
-              Clínica odontológica completa em São José dos Campos, com atendimento de urgência 24h e equipe altamente qualificada.
+              Clínica odontológica em São José dos Campos com foco em implantes, estética dental e harmonização orofacial.
             </p>
             <!-- NAP -->
             <address class="not-italic text-sm text-slate-500 space-y-1">
@@ -316,7 +298,6 @@ const faqPageSchema = faqSchema.length > 0 ? {
               <li><a href="/odontologia-geral" class="hover:text-emerald-400 transition-colors">Odontologia Geral</a></li>
               <li><a href="/odontologia-geral#periodontia" class="hover:text-emerald-400 transition-colors">Periodontia</a></li>
               <li><a href="/odontologia-geral#ortodontia" class="hover:text-emerald-400 transition-colors">Ortodontia</a></li>
-              <li><a href="/urgencia-24h" class="text-red-400 hover:text-red-300 font-medium transition-colors">Urgência 24h</a></li>
             </ul>
           </div>
 
@@ -335,9 +316,6 @@ const faqPageSchema = faqSchema.length > 0 ? {
               <li class="flex justify-between gap-4">
                 <span>Domingo</span>
                 <span class="text-slate-400">Fechado</span>
-              </li>
-              <li class="pt-2 border-t border-slate-800">
-                <span class="text-red-400 font-medium text-xs">Emergências atendidas 24 horas</span>
               </li>
             </ul>
             <div class="mt-5 space-y-2">
