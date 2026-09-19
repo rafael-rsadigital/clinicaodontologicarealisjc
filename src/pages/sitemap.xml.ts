@@ -5,7 +5,6 @@ export const GET = () => {
     { url: '/', priority: '1.0', changefreq: 'weekly' },
     { url: '/implantes-e-proteses', priority: '0.9', changefreq: 'monthly' },
     { url: '/estetica-e-harmonizacao', priority: '0.9', changefreq: 'monthly' },
-    { url: '/urgencia-24h', priority: '0.95', changefreq: 'monthly' },
     { url: '/odontologia-geral', priority: '0.8', changefreq: 'monthly' },
   ];
 
